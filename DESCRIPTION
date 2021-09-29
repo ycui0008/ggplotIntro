@@ -17,3 +17,6 @@ URL: https://github.com/ycui0008/ggplotIntro
 BugReports: https://github.com/ycui0008/ggplotIntro/issues
 Depends: 
     R (>= 2.10)
+Imports: 
+    ggplot2,
+    datasets
