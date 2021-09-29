@@ -1,13 +1,19 @@
 Package: ggplotIntro
 Type: Package
-Title: What the Package Does (Title Case)
+Title: A shiny App for ggplot New Learner
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
+Authors@R: 
+    person(given = "Yuheng",
+           family = "Cui",
+           role = c("aut", "cre"),
+           email = "first.last@example.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Contains data and a shiny app for ggplot new learner.
     Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/ycui0008/ggplotIntro
 BugReports: https://github.com/ycui0008/ggplotIntro/issues
+Depends: 
+    R (>= 2.10)
