@@ -1,0 +1,46 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      message = FALSE,
+                      warning = FALSE)
+library(ggplot2)
+library(dplyr)
+```
+
+### A good plot must have labels for its x- and y-axis
+
+After you draw a plot, such as the plot below.
+
+```{r}
+diamonds %>%
+  ggplot(aes(x = carat, y = price)) +
+  geom_point(alpha = 0.5)
+```
+
+Readers can be confused because the plot does not have any title or labels.
+
+They may have some questions about the plot:
+
+* What is this plot about?
+* What are x-axis measures?
+* Which currency is used for price measurement?
+
+So, if we add title and labels to the plot, is the plot more readable? You can know more about the `labs()` by entering `?labs()` in your R console.
+
+```{r}
+diamonds %>%
+  ggplot(aes(x = carat, y = price)) +
+  geom_point(alpha = 0.5) +
+  labs(title = "Prices of round cut diamonds", # plot title
+       x = "Weight of the diamond (carat)", # x-axis label
+       y = "Price (USD)") # y-axis label
+```
+
+
+### Let's have one simple exercise, and remember to give your future plots labels and titles
+
+
+Try to fill in the blanks.
