@@ -63,3 +63,9 @@ summary(who_covid)
 #>  Max.   :604.43                               
 #>  NA's   :1
 ```
+
+# Use the shiny app
+
+```
+launch_app()
+```
