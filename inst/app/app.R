@@ -14,7 +14,6 @@ library(ggplot2) # Import
 library(magrittr) # Import
 library(shinyjs)
 library(tidyr)
-library(skimr)
 library(shinyAce)
 library(dplyr)
 

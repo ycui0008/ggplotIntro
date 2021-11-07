@@ -9,7 +9,8 @@
 #'
 #' @import shiny
 #'
-#' @example launch_app()
+#' @example
+#' launch_app()
 #'
 #' @export
 launch_app <- function(){

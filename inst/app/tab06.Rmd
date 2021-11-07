@@ -49,23 +49,7 @@ Now, we can see each country's boundaries are plotted as points.
 `who_covid` records COVID-19 cases and deaths in the countries of the world. Try to use `?who_covid` to read more information about the data.
 
 ```{r}
-
-url <- 'https://covid19.who.int/WHO-COVID-19-global-table-data.csv'
-
-who_covid <- read_csv(url) %>%
-    janitor::clean_names() %>%
-    dplyr::select(
-        name,
-        who_region,
-        cases_cumulative_total,
-        cases_cumulative_total_per_100000_population,
-        deaths_cumulative_total,
-        deaths_cumulative_total_per_100000_population
-    )
-# all codes above will be replaced once the shiny is in the package
-
-
-head(who_covid)
+head(ggplotIntro::who_covid)
 ```
 
 Before we using `geom_polygon()` to draw a map, we need to join `world` data to `who_covid` data, because originally `who_covid` data does not contain countries' map data. 
@@ -74,7 +58,7 @@ First, rename USA and UK, because in world data United States of America is call
 
 ```{r}
 covid <-
-  mutate(who_covid, name = case_when(name == "United States of America" ~ "USA", 
+  mutate(ggplotIntro::who_covid, name = case_when(name == "United States of America" ~ "USA", 
                           name == "United Kingdom" ~ "UK",
                           TRUE ~ name))
 ```
